@@ -7,7 +7,9 @@ print("Введите число N: ")
 num = int(input())
 result = 1
 
+print ("[", end =" ")
 for i in range (1, num + 1):
    result *= i
    print(result, end =" ")
+print ("]", end = "")   
 
