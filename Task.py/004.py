@@ -2,9 +2,20 @@
 #  Найдите произведение элементов на указанных позициях. 
 #  Позиции хранятся в файле file.txt в одной строке одно число.
 
-print("Введите количество элементов списка N: ")
-N = int(input())
+import random
 
-for i in range (-N, N + 1):
-    
+print('Введите число элементов в списке N: ')
+N = int (input())
+arr = []
+
+for _ in range(N):
+    arr.append(random.randint(-N, N))
+print(arr)
+
+x = []
+with open("file.txt", "r") as data:
+   x = data.read().split("\n")
+result = arr[int(x[0])] * arr[int(x[1])]
+
+print(result)
 
